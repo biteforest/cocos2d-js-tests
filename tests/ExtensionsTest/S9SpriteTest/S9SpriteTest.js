@@ -42,7 +42,7 @@ var S9SpriteTestDemo = cc.LayerGradient.extend({
         this._super();
         cc.associateWithNative( this, cc.LayerGradient );
         this.init( cc.c4b(0,0,0,255), cc.c4b(98,99,117,255));
-        cc.SpriteFrameCache.getInstance().addSpriteFrames(s_s9s_blocks9_plist);
+        cc.SpriteFrameCache.getInstance().addSpriteFrames(s_s9s_newspritesheet_plist);
         cc.log('sprite frames added to sprite frame cache...');
     },
     onEnter:function () {
@@ -143,7 +143,7 @@ var S9FrameNameSpriteSheet = S9SpriteTestDemo.extend({
 
         cc.log("S9FrameNameSpriteSheet ...");
 
-        var blocks = cc.Scale9Sprite.createWithSpriteFrameName('blocks9.png');
+        var blocks = cc.Scale9Sprite.createWithSpriteFrameName('abcd9.png');
         cc.log("... created");
 
         blocks.setPosition(cc.p(x, y));
@@ -161,7 +161,7 @@ var S9FrameNameSpriteSheet = S9SpriteTestDemo.extend({
 var S9FrameNameSpriteSheetRotated = S9SpriteTestDemo.extend({
 
     _title:"Scale9Sprite from sprite sheet (stored rotated)",
-    _subtitle:"createWithSpriteFrameName(); default cap insets",
+    _subtitle:"createWithSpriteFrameName(); default cap insets; abcd9rotated90.png",
 
     ctor:function() {
         this._super();
@@ -171,7 +171,7 @@ var S9FrameNameSpriteSheetRotated = S9SpriteTestDemo.extend({
 
         cc.log("S9FrameNameSpriteSheetRotated ...");
 
-        var blocks = cc.Scale9Sprite.createWithSpriteFrameName('blocks9r.png');
+        var blocks = cc.Scale9Sprite.createWithSpriteFrameName('abcd9rotated90.png');
         cc.log("... created");
 
         blocks.setPosition(cc.p(x, y));
@@ -236,7 +236,7 @@ var S9FrameNameSpriteSheetScaledNoInsets = S9SpriteTestDemo.extend({
 
         cc.log("S9FrameNameSpriteSheetScaledNoInsets ...");
 
-        var blocks_scaled = cc.Scale9Sprite.createWithSpriteFrameName('blocks9.png');
+        var blocks_scaled = cc.Scale9Sprite.createWithSpriteFrameName('abcd9.png');
         cc.log("... created");
 
         blocks_scaled.setPosition(cc.p(x, y));
@@ -267,7 +267,7 @@ var S9FrameNameSpriteSheetRotatedScaledNoInsets = S9SpriteTestDemo.extend({
 
         cc.log("S9FrameNameSpriteSheetRotatedScaledNoInsets ...");
 
-        var blocks_scaled = cc.Scale9Sprite.createWithSpriteFrameName('blocks9r.png');
+        var blocks_scaled = cc.Scale9Sprite.createWithSpriteFrameName('abcd9rotated90.png');
         cc.log("... created");
 
         blocks_scaled.setPosition(cc.p(x, y));
@@ -336,7 +336,7 @@ var S9FrameNameSpriteSheetInsets = S9SpriteTestDemo.extend({
 
         cc.log("S9FrameNameSpriteSheetInsets ...");
 
-        var blocks_with_insets = cc.Scale9Sprite.createWithSpriteFrameName('blocks9.png', cc.rect(32, 32, 32, 32));
+        var blocks_with_insets = cc.Scale9Sprite.createWithSpriteFrameName('abcd9.png', cc.rect(32, 32, 32, 32));
         cc.log("... created");
 
         blocks_with_insets.setPosition(cc.p(x, y));
@@ -364,7 +364,7 @@ var S9FrameNameSpriteSheetInsetsScaled = S9SpriteTestDemo.extend({
 
         cc.log("S9FrameNameSpriteSheetInsetsScaled ...");
 
-        var blocks_scaled_with_insets = cc.Scale9Sprite.createWithSpriteFrameName('blocks9.png', cc.rect(32, 32, 32, 32));
+        var blocks_scaled_with_insets = cc.Scale9Sprite.createWithSpriteFrameName('abcd9.png', cc.rect(32, 32, 32, 32));
         cc.log("... created");
 
         blocks_scaled_with_insets.setContentSize(cc.size(96 * 4.5, 96 * 2.5));
@@ -395,7 +395,7 @@ var S9FrameNameSpriteSheetRotatedInsets = S9SpriteTestDemo.extend({
 
         cc.log("S9FrameNameSpriteSheetRotatedInsets ...");
 
-        var blocks_with_insets = cc.Scale9Sprite.createWithSpriteFrameName('blocks9r.png', cc.rect(32, 32, 32, 32));
+        var blocks_with_insets = cc.Scale9Sprite.createWithSpriteFrameName('abcd9rotated90.png', cc.rect(32, 32, 32, 32));
         cc.log("... created");
 
         blocks_with_insets.setPosition(cc.p(x, y));
@@ -423,7 +423,7 @@ var S9FrameNameSpriteSheetRotatedInsetsScaled = S9SpriteTestDemo.extend({
 
         cc.log("S9FrameNameSpriteSheetRotatedInsetsScaled ...");
 
-        var blocks_scaled_with_insets = cc.Scale9Sprite.createWithSpriteFrameName('blocks9.png', cc.rect(32, 32, 32, 32));
+        var blocks_scaled_with_insets = cc.Scale9Sprite.createWithSpriteFrameName('abcd9.png', cc.rect(32, 32, 32, 32));
         cc.log("... created");
 
         blocks_scaled_with_insets.setContentSize(cc.size(96 * 4.5, 96 * 2.5));
