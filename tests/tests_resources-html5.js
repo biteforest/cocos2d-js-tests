@@ -59,6 +59,9 @@ var s_tcc_issue_2_plist = "res/animations/tcc_issue_2.plist";
 var s_s9s_blocks9 = "res/Images/blocks9ss.png";
 var s_s9s_blocks9_plist = "res/Images/blocks9ss.plist";
 
+var s_s9s_newspritesheet = "res/Images/newspritesheet.png";
+var s_s9s_newspritesheet_plist = "res/Images/newspritesheet.plist";
+
 var s_boilingFoamPlist = "res/Images/BoilingFoam.plist";
 var s_grossiniPlist = "res/animations/grossini.plist";
 var s_grossini_grayPlist = "res/animations/grossini_gray.plist";
