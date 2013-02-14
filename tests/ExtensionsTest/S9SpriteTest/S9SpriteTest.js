@@ -439,6 +439,215 @@ var S9FrameNameSpriteSheetRotatedInsetsScaled = S9SpriteTestDemo.extend({
     }
 });
 
+// S9BatchNodeSetCapInsets
+
+var S9BatchNodeSetCapInsets = S9SpriteTestDemo.extend({
+
+    _title:"Scale9Sprite's capInsets are modified",
+    _subtitle:"updateWithBatchNode(); capInsets=full size; rendered 4 X width, 2 X height; setCapInsets; re-render",
+
+    ctor:function() {
+        this._super();
+
+        var x = winSize.width / 2;
+        var y = 0 + (winSize.height / 2);
+
+        cc.log("S9BatchNodeSetCapInsets ...");
+
+        // scaled without insets
+        var batchNode_scaled = cc.SpriteBatchNode.create("res/Images/blocks9.png");
+        cc.log("batchNode_scaled created with : " + "res/Images/blocks9.png");
+
+        var blocks_scaled = cc.Scale9Sprite.create();
+        cc.log("... created");
+
+        blocks_scaled.updateWithBatchNode(batchNode_scaled, cc.rect(0, 0, 96, 96), false, cc.rect(0, 0, 96, 96));
+        cc.log("... updateWithBatchNode");
+
+        blocks_scaled.setCapInsets(cc.rect(32, 32, 32, 32));
+        cc.log("... setCapInsets(cc.rect(32, 32, 32, 32))");
+
+        blocks_scaled.setContentSize(cc.size(96 * 4.5, 96 * 2.5));
+        cc.log("... setContentSize");
+
+        blocks_scaled.setPosition(cc.p(x, y));
+        cc.log("... setPosition");
+
+        this.addChild(blocks_scaled);
+        cc.log("this..addChild");
+
+        cc.log("... S9BatchNodeSetCapInsets done.");
+    }
+});
+
+// S9BatchNodeScaleWithCapInsetsSetColor
+
+var S9BatchNodeScaleWithCapInsetsSetColor = S9SpriteTestDemo.extend({
+
+    _title:"Scale9Sprite created empty and updated from SpriteBatchNode",
+    _subtitle:"updateWithBatchNode(); capInsets=(32, 32, 32, 32); setColor(RED)",
+
+    ctor:function() {
+        this._super();
+
+        var x = winSize.width / 2;
+        var y = 0 + (winSize.height / 2);
+
+        cc.log("S9BatchNodeScaleWithCapInsetsSetColor ...");
+
+        var batchNode_scaled_with_insets = cc.SpriteBatchNode.create("res/Images/blocks9.png");
+        cc.log("batchNode_scaled_with_insets created with : " + "res/Images/blocks9.png");
+
+        var blocks_scaled_with_insets = cc.Scale9Sprite.create();
+        cc.log("... created");
+
+        blocks_scaled_with_insets.updateWithBatchNode(batchNode_scaled_with_insets, cc.rect(0, 0, 96, 96), false, cc.rect(32, 32, 32, 32));
+        cc.log("... updateWithBatchNode");
+
+        blocks_scaled_with_insets.setContentSize(cc.size(96 * 4.5, 96 * 2.5));
+        cc.log("... setContentSize");
+
+        blocks_scaled_with_insets.setColor(cc.c3b(255,0,0));
+        cc.log("... setColor");
+
+        blocks_scaled_with_insets.setPosition(cc.p(x, y));
+        cc.log("... setPosition");
+
+        this.addChild(blocks_scaled_with_insets);
+        cc.log("this..addChild");
+
+        cc.log("... S9BatchNodeScaleWithCapInsetsSetColor done.");
+    }
+});
+
+// S9BatchNodeSetCapInsetsSetColor
+
+var S9BatchNodeSetCapInsetsSetColor = S9SpriteTestDemo.extend({
+
+    _title:"Scale9Sprite's capInsets are modified",
+    _subtitle:"updateWithBatchNode(); capInsets=full size; rendered 4 X width, 2 X height; setColor(RED); setCapInsets; re-render",
+
+    ctor:function() {
+        this._super();
+
+        var x = winSize.width / 2;
+        var y = 0 + (winSize.height / 2);
+
+        cc.log("S9BatchNodeUpdateCapInsetsSetColor ...");
+
+        // scaled without insets
+        var batchNode_scaled = cc.SpriteBatchNode.create("res/Images/blocks9.png");
+        cc.log("batchNode_scaled created with : " + "res/Images/blocks9.png");
+
+        var blocks_scaled = cc.Scale9Sprite.create();
+        cc.log("... created");
+
+        blocks_scaled.updateWithBatchNode(batchNode_scaled, cc.rect(0, 0, 96, 96), false, cc.rect(0, 0, 96, 96));
+        cc.log("... updateWithBatchNode");
+
+        blocks_scaled.setColor(cc.c3b(255,0,0));
+        cc.log("... setColor");
+
+        blocks_scaled.setCapInsets(cc.rect(32, 32, 32, 32));
+        cc.log("... setCapInsets(cc.rect(32, 32, 32, 32))");
+
+        blocks_scaled.setContentSize(cc.size(96 * 4.5, 96 * 2.5));
+        cc.log("... setContentSize");
+
+        blocks_scaled.setPosition(cc.p(x, y));
+        cc.log("... setPosition");
+
+        this.addChild(blocks_scaled);
+        cc.log("this..addChild");
+
+        cc.log("... S9BatchNodeSetCapInsetsSetColor done.");
+    }
+});
+
+// S9BatchNodeScaleWithCapInsetsSetOpacity
+
+var S9BatchNodeScaleWithCapInsetsSetOpacity = S9SpriteTestDemo.extend({
+
+    _title:"Scale9Sprite created empty and updated from SpriteBatchNode",
+    _subtitle:"updateWithBatchNode(); capInsets=(32, 32, 32, 32); setOpacity(...)",
+
+    ctor:function() {
+        this._super();
+
+        var x = winSize.width / 2;
+        var y = 0 + (winSize.height / 2);
+
+        cc.log("S9BatchNodeScaleWithCapInsetsSetOpacity ...");
+
+        var batchNode_scaled_with_insets = cc.SpriteBatchNode.create("res/Images/blocks9.png");
+        cc.log("batchNode_scaled_with_insets created with : " + "res/Images/blocks9.png");
+
+        var blocks_scaled_with_insets = cc.Scale9Sprite.create();
+        cc.log("... created");
+
+        blocks_scaled_with_insets.updateWithBatchNode(batchNode_scaled_with_insets, cc.rect(0, 0, 96, 96), false, cc.rect(32, 32, 32, 32));
+        cc.log("... updateWithBatchNode");
+
+        blocks_scaled_with_insets.setContentSize(cc.size(96 * 4.5, 96 * 2.5));
+        cc.log("... setContentSize");
+
+        blocks_scaled_with_insets.setOpacity(64);
+        cc.log("... setOpacity");
+
+        blocks_scaled_with_insets.setPosition(cc.p(x, y));
+        cc.log("... setPosition");
+
+        this.addChild(blocks_scaled_with_insets);
+        cc.log("this..addChild");
+
+        cc.log("... S9BatchNodeScaleWithCapInsetsSetOpacity done.");
+    }
+});
+
+// S9BatchNodeSetCapInsetsSetOpacity
+
+var S9BatchNodeSetCapInsetsSetOpacity = S9SpriteTestDemo.extend({
+
+    _title:"Scale9Sprite's capInsets are modified",
+    _subtitle:"updateWithBatchNode(); capInsets=full size; rendered 4 X width, 2 X height; setOpacity(...); setCapInsets; re-render",
+
+    ctor:function() {
+        this._super();
+
+        var x = winSize.width / 2;
+        var y = 0 + (winSize.height / 2);
+
+        cc.log("S9BatchNodeUpdateCapInsetsSetOpacity ...");
+
+        // scaled without insets
+        var batchNode_scaled = cc.SpriteBatchNode.create("res/Images/blocks9.png");
+        cc.log("batchNode_scaled created with : " + "res/Images/blocks9.png");
+
+        var blocks_scaled = cc.Scale9Sprite.create();
+        cc.log("... created");
+
+        blocks_scaled.updateWithBatchNode(batchNode_scaled, cc.rect(0, 0, 96, 96), false, cc.rect(0, 0, 96, 96));
+        cc.log("... updateWithBatchNode");
+
+        blocks_scaled.setOpacity(64);
+        cc.log("... setOpacity");
+
+        blocks_scaled.setCapInsets(cc.rect(32, 32, 32, 32));
+        cc.log("... setCapInsets(cc.rect(32, 32, 32, 32))");
+
+        blocks_scaled.setContentSize(cc.size(96 * 4.5, 96 * 2.5));
+        cc.log("... setContentSize");
+
+        blocks_scaled.setPosition(cc.p(x, y));
+        cc.log("... setPosition");
+
+        this.addChild(blocks_scaled);
+        cc.log("this..addChild");
+
+        cc.log("... S9BatchNodeSetCapInsetsSetOpacity done.");
+    }
+});
+
 var S9SpriteTestScene = TestScene.extend({
     runThisTest:function () {
         sceneIdx = -1;
@@ -464,7 +673,12 @@ var arrayOfS9SpriteTest = [
     S9FrameNameSpriteSheetInsets,
     S9FrameNameSpriteSheetInsetsScaled,
     S9FrameNameSpriteSheetRotatedInsets,
-    S9FrameNameSpriteSheetRotatedInsetsScaled
+    S9FrameNameSpriteSheetRotatedInsetsScaled,
+    S9BatchNodeSetCapInsets,
+    S9BatchNodeScaleWithCapInsetsSetColor,
+    S9BatchNodeSetCapInsetsSetColor,
+    S9BatchNodeScaleWithCapInsetsSetOpacity,
+    S9BatchNodeSetCapInsetsSetOpacity
 ];
 
 var nextS9SpriteTest = function () {
